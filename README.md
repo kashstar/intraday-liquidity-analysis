@@ -1,5 +1,7 @@
 # Intraday Liquidity and Portfolio Construction
 
+![](https://img.shields.io/badge/python-3.10%2B-informational?style=flat-square) ![](https://img.shields.io/badge/data-1--minute_LSE-informational?style=flat-square) ![](https://img.shields.io/badge/licence-MIT-informational?style=flat-square)
+
 Two connected studies from a portfolio-manager's perspective, on UK equity microstructure and
 country-level allocation.
 
@@ -17,6 +19,11 @@ observations per name over three months:
 - Execution implications: delay non-urgent trades 30-60 minutes after the open; block trades
   target the close.
 
+![Intraday liquidity patterns](assets/intraday_patterns.png)
+*Spreads compress after the open; depth builds all day and triples into the close — no textbook U-shape.*
+
+![Spread vs volatility](assets/spread_vs_volatility.png)
+
 ## Part 2 — Country allocation (34 markets, 2006-2026)
 
 - Cross-country momentum HML earned ~0 (Sharpe 0.005) over the sample — momentum-crash dynamics;
@@ -26,6 +33,9 @@ observations per name over three months:
 - Replacing pairwise correlations with the cross-sectional average (constant-correlation
   estimator, Ledoit-Wolf target) improves **every** metric simultaneously: Sharpe 0.51,
   mean 18.5% vs 8.9% world, beta 0.15 — a near-market-neutral overlay.
+
+![MV portfolio comparison](assets/mv_portfolio_comparison.png)
+*Sample vs constant-correlation covariance: the robust estimator improves every metric simultaneously.*
 
 ## Data
 
